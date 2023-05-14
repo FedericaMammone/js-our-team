@@ -1,3 +1,6 @@
+
+// console.log(cardContainer);
+
 // creazione array con oggetti
 
 const card = [
@@ -38,3 +41,29 @@ const card = [
     }
 
 ]
+
+// console.log(card);
+
+
+for (let i = 0; i < card.length; i++) {
+    let objIesimo = card[i];
+    // console.log(objIesimo);
+    // console.log(objIesimo.nome);
+
+    for (let chiaveObj in objIesimo) {
+        // console.log(objIesimo[chiaveObj]);
+    }
+
+    // let cardElement = `<span>${objIesimo.nome}</span>` + 
+    // `<span>${objIesimo.ruolo}</span>` + `<img src="${objIesimo.foto}" alt="foto"></img>`;
+    // console.log(cardElement);
+
+    // cardContainer.append(cardElement);
+    // cardElement.append(objIesimo.nome)
+
+    // cardContainer.innerHTML(`<span>${objIesimo.nome}</span>`);
+
+    document.getElementsByClassName("card").innerHTML =  `<span>${objIesimo.nome}</span>` ;
+}
+
+
