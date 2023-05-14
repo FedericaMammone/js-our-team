@@ -52,6 +52,8 @@ for (let i = 0; i < card.length; i++) {
 
     for (let chiaveObj in objIesimo) {
         // console.log(objIesimo[chiaveObj]);
+
+        document.querySelector(".card").innerHTML = `<img src="img/${objIesimo.foto}" alt="foto"></img>`+`<span>${objIesimo.nome}</span>`+`<span>${objIesimo.ruolo}</span>`;
     }
 
     // let cardElement = `<span>${objIesimo.nome}</span>` + 
@@ -63,7 +65,7 @@ for (let i = 0; i < card.length; i++) {
 
     // cardContainer.innerHTML(`<span>${objIesimo.nome}</span>`);
 
-    document.getElementsByClassName("card").innerHTML =  `<span>${objIesimo.nome}</span>` ;
+   
 }
 
 
