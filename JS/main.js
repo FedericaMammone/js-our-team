@@ -44,17 +44,18 @@ const card = [
 
 // console.log(card);
 
+const containerDiv = document.getElementById("container");
 
 for (let i = 0; i < card.length; i++) {
     let objIesimo = card[i];
-    // console.log(objIesimo);
+    console.log(objIesimo);
     // console.log(objIesimo.nome);
 
-    for (let chiaveObj in objIesimo) {
-        // console.log(objIesimo[chiaveObj]);
+    // for (let chiaveObj in objIesimo) {
+    //     // console.log(objIesimo[chiaveObj]);
 
-        document.querySelector(".card").innerHTML = `<img src="img/${objIesimo.foto}" alt="foto"></img>`+`<span>${objIesimo.nome}</span>`+`<span>${objIesimo.ruolo}</span>`;
-    }
+    //     document.querySelector(".card").innerHTML = `<img src="img/${objIesimo.foto}" alt="foto"></img>`+`<span>${objIesimo.nome}</span>`+`<span>${objIesimo.ruolo}</span>`;
+    // }
 
     // let cardElement = `<span>${objIesimo.nome}</span>` + 
     // `<span>${objIesimo.ruolo}</span>` + `<img src="${objIesimo.foto}" alt="foto"></img>`;
@@ -65,7 +66,23 @@ for (let i = 0; i < card.length; i++) {
 
     // cardContainer.innerHTML(`<span>${objIesimo.nome}</span>`);
 
-   
+   const nomeMembro = objIesimo.nome;
+   const ruoloMembro = objIesimo.ruolo;
+   const fotoMembro = objIesimo.foto;
+
+   const cardElement = `
+                            <div class="card">
+                                <img src="img/${fotoMembro}" alt="foto"></img>
+                                <span>${nomeMembro}</span>
+                                <span>${ruoloMembro}</span>
+                            </div>
+
+                            
+                        `
+
+    console.log(cardElement);
+
+    containerDiv.innerHTML += cardElement;
 }
 
 

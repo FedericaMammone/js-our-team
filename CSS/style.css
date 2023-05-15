@@ -15,11 +15,15 @@ body {
     margin: 0 auto;
 }
 
-.container {
+#container {
+    
     width: 60%;
-    margin: 20px auto;
     
     height: 740px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 20px auto;
 }
 
 .row {
@@ -28,7 +32,7 @@ body {
 }
 
 .card {
-    width: calc(100%/3);
+    
     background-color: white;
     height: 350px;
     margin: 10px 10px;
